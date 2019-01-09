@@ -1,6 +1,6 @@
 # my_first_flutter_pro
 
-A new Flutter project.
+flutter视频播放器App
 
 ## Getting Started
 
