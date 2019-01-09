@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/home.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(new MaterialApp(
     title: 'My app', // used by the OS task switcher
     home: new LoginHomePage(),
+    routes: <String, WidgetBuilder> {
+      '/login': (BuildContext context) => LoginHomePage(),
+      '/home': (BuildContext context) => HomePage(),
+    },
   ));
 }
 class LoginHomePage extends StatefulWidget{
@@ -19,8 +24,35 @@ class _LoginHomePage extends State<LoginHomePage>{
   final TextEditingController userNameController = new TextEditingController();
   final TextEditingController pwdController = new TextEditingController();
   @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+    debugPrint("didChangeDependencies");
+  }
+  @override
+  void didUpdateWidget(LoginHomePage oldWidget) {
+    // TODO: implement didUpdateWidget
+    super.didUpdateWidget(oldWidget);
+    debugPrint("didUpdateWidget");
+  }
+  @override
+  void setState(fn) {
+    // TODO: implement setState
+    super.setState(fn);
+    debugPrint("setState");
+  }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    debugPrint("initState");
+    userNameController.text="liuxinye";
+    pwdController.text="liu123456";
+  }
+  @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    debugPrint("build");
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("登录",style: new TextStyle(
@@ -38,12 +70,14 @@ class _LoginHomePage extends State<LoginHomePage>{
               controller: userNameController,
               decoration: new InputDecoration(
                 hintText: '请输入用户名',
+                icon: Icon(Icons.account_box)
               ),
             ),
             new TextField(
               controller: pwdController,
               decoration: new InputDecoration(
                 hintText: '请输入密码',
+                icon: Icon(Icons.phonelink_lock)
               ),
             ),
             new ButtonBar(
@@ -54,8 +88,7 @@ class _LoginHomePage extends State<LoginHomePage>{
                     if(userNameController.text=="liuxinye"){
                       if(pwdController.text=="liu123456"){
                         Toast.toast(context, "登陆成功！");
-                        Navigator.push(context,
-                            new MaterialPageRoute(builder: (context) => new HomePage()));
+                        Navigator.pushNamedAndRemoveUntil(context, "/home", ModalRoute.withName("/home"));
                       }
                       else{
                         pwdController.text="";
