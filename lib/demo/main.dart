@@ -9,9 +9,9 @@ class SampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Sample App',
+      title: 'this is title',
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
       home: new SampleAppPage(),
     );
@@ -19,7 +19,7 @@ class SampleApp extends StatelessWidget {
 }
 
 class SampleAppPage extends StatefulWidget {
-  SampleAppPage({Key key}) : super(key: key);
+  SampleAppPage({Key key}) :super(key: key);
 
   @override
   _SampleAppPageState createState() => new _SampleAppPageState();
@@ -36,9 +36,9 @@ class _SampleAppPageState extends State<SampleAppPage> {
 
   _getToggleChild() {
     if (toggle) {
-      return new Text('Toggle One===');
+      return new Text('Toggle One');
     } else {
-      return new MaterialButton(onPressed: () {}, child: new Text('Toggle Two'));
+      return new Text('Toggle Two');
     }
   }
 
@@ -46,7 +46,9 @@ class _SampleAppPageState extends State<SampleAppPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Sample App"),
+        title: new Text("标题"
+        ),
+        backgroundColor: Colors.blue,
       ),
       body: new Center(
         child: _getToggleChild(),
@@ -54,7 +56,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
       floatingActionButton: new FloatingActionButton(
         onPressed: _toggle,
         tooltip: 'Update Text',
-        child: new Icon(Icons.data_usage),
+        child: new Icon(Icons.update),
       ),
     );
   }
