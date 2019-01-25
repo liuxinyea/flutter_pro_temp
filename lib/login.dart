@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_pro/demo/ListPage.dart';
+import 'package:my_first_flutter_pro/demo/MyTabBar.dart';
 import 'package:my_first_flutter_pro/home.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,6 +12,8 @@ void main() {
     routes: <String, WidgetBuilder> {
       '/login': (BuildContext context) => LoginHomePage(),
       '/home': (BuildContext context) => HomePage(),
+      '/list': (BuildContext context) => ListPage(),
+      '/tabBar':(BuildContext context) => MyTabBarHome(),
     },
   ));
 }

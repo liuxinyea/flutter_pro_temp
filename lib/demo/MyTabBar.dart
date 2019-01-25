@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-
 void main() {
   runApp(new MaterialApp(
-    title: 'Flutter Tutorial',
-    home: new TutorialHome(),
+    title: 'My app', // used by the OS task switcher
+    home: new MyTabBarHome(),
   ));
 }
-
-class TutorialHome extends StatelessWidget {
+class MyTabBarHome extends StatelessWidget {
   addChild(){
   }
   @override
@@ -31,7 +29,9 @@ class TutorialHome extends StatelessWidget {
       ),
       //body占屏幕的大部分
       body: new Container(
+        alignment: FractionalOffset.bottomLeft,
         child: new Row(
+          
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             new Column(
@@ -39,6 +39,13 @@ class TutorialHome extends StatelessWidget {
               children: <Widget>[
                   new Icon(Icons.home),
                   new Text("首页")
+              ],
+            ),
+            new Column(
+//              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                new Icon(Icons.list),
+                new Text("列表")
               ],
             ),
             new Column(

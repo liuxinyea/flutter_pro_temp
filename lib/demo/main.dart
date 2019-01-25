@@ -28,20 +28,17 @@ class SampleAppPage extends StatefulWidget {
 class _SampleAppPageState extends State<SampleAppPage> {
   // Default value for toggle
   bool toggle = true;
+  String _text='1111111111';
   void _toggle() {
+    if (toggle) {
+      _text="1111111111";
+    } else {
+      _text="22222222222";
+    }
     setState(() {
       toggle = !toggle;
     });
   }
-
-  _getToggleChild() {
-    if (toggle) {
-      return new Text('Toggle One');
-    } else {
-      return new Text('Toggle Two');
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -51,7 +48,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
         backgroundColor: Colors.blue,
       ),
       body: new Center(
-        child: _getToggleChild(),
+        child:new Text("文本是$_text"),
       ),
       floatingActionButton: new FloatingActionButton(
         onPressed: _toggle,

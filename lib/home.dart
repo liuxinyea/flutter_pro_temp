@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_pro/login.dart';
+import 'package:my_first_flutter_pro/view/BannerView.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
+import 'package:my_first_flutter_pro/view/LoginFormCode.dart';
 class HomePage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -24,14 +25,23 @@ class _HomePage extends State<HomePage>{
         backgroundColor: Colors.green,
       ),
       body: new Container(
-          padding: EdgeInsets.only(left: 30,right: 30,top:100),
-          child: new Center(
-            child: new RaisedButton(onPressed:(){
-              if(Navigator.canPop(context))
-                   Navigator.pop(context);
-            },
-            child: new Text("返回"),
-            ),
+          padding: EdgeInsets.only(left: 0,right: 0,top:0),
+          child:new Column(
+            children: <Widget>[
+              new BannerView(),
+              new RaisedButton(onPressed:(){
+                Navigator.pushNamed(context, '/list');
+              },
+                child: new Text("跳转1"),
+              ),
+              new LoginFormCode(countdown: 60,onTapCallback: (){
+//                Toast.toast(context, "验证码已发送");
+
+                 AlertDialog(
+                   title: new Text("提示"),
+                 ).build(context);
+              },available: true)
+            ],
           )
       ),
     );
