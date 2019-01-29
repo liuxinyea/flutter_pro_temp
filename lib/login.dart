@@ -13,7 +13,6 @@ void main() {
       '/login': (BuildContext context) => LoginHomePage(),
       '/home': (BuildContext context) => HomePage(),
       '/list': (BuildContext context) => ListPage(),
-      '/tabBar':(BuildContext context) => MyTabBarHome(),
     },
   ));
 }

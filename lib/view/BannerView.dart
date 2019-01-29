@@ -49,7 +49,7 @@ class _BannerViewState extends State<BannerView>{
             // 当前页面在视窗中占用的空间，默认为`0.8`。
             viewportFraction: 1.0,
             // 宽高比例，默认为`16/9`。
-            aspectRatio:5/3,
+            aspectRatio:16/9,
             // 切换时当前页面逐渐变小，新页面逐渐变大直至完全替代当前页面，
             // 默认为`true`。
             distortion: false,
