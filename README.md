@@ -1,6 +1,6 @@
 # my_first_flutter_pro
 
-flutter视频播放器App
+flutter开发App
 
 ## Getting Started
 
