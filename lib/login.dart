@@ -1,17 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/demo/ListPage.dart';
 import 'package:my_first_flutter_pro/demo/MyTabBar.dart';
-import 'package:my_first_flutter_pro/home.dart';
+import 'package:my_first_flutter_pro/host.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  /*捕获flutter的异常*/
+  FlutterError.onError = (FlutterErrorDetails details) {
+//    reportError(details);
+  };
+   //MaterialApp是管理Material风格APP的脚手架
   runApp(new MaterialApp(
     title: 'My app', // used by the OS task switcher
+    /*MaterialApp的首页*/
     home: new LoginHomePage(),
+    /*设置app的主题样式*/
+    theme: new ThemeData(
+      primarySwatch: Colors.green,
+      primaryColor: Colors.green,
+      accentColor: Colors.green,
+      buttonTheme: ButtonThemeData(
+          buttonColor: Colors.green,
+          highlightColor:  Colors.lightGreen
+      )
+    ),
+    /*MaterialApp的路由管理*/
     routes: <String, WidgetBuilder> {
       '/login': (BuildContext context) => LoginHomePage(),
-      '/home': (BuildContext context) => HomePage(),
+      '/home': (BuildContext context) =>HostPage(),
       '/list': (BuildContext context) => ListPage(),
     },
   ));
@@ -63,7 +80,6 @@ class _LoginHomePage extends State<LoginHomePage>{
           color: Colors.white
         ),
         ),
-        backgroundColor: Colors.green,
       ),
       body: new Container(
         padding: EdgeInsets.only(left: 30,right: 30,top:100),
@@ -73,14 +89,16 @@ class _LoginHomePage extends State<LoginHomePage>{
               controller: userNameController,
               decoration: new InputDecoration(
                 hintText: '请输入用户名',
-                icon: Icon(Icons.account_box)
+                labelText: "用户名",
+                prefixIcon: Icon(Icons.person),
               ),
             ),
             new TextField(
               controller: pwdController,
               decoration: new InputDecoration(
-                hintText: '请输入密码',
-                icon: Icon(Icons.phonelink_lock)
+                labelText: "密码",
+              hintText: '请输入密码',
+              prefixIcon: Icon(Icons.lock),
               ),
             ),
             new ButtonBar(
@@ -103,8 +121,6 @@ class _LoginHomePage extends State<LoginHomePage>{
                     }
                   },
                   padding: EdgeInsets.only(left:50,right:50),
-                  color: Colors.green,
-                  highlightColor:Colors.lightGreen ,
                   child: new Text("登录",style: new TextStyle(
                     color:Colors.white,
                   ),),

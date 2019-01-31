@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/demo/MyTabBar.dart';
+import 'package:my_first_flutter_pro/page/homePage.dart';
 import 'package:my_first_flutter_pro/view/BannerView.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
 import 'package:my_first_flutter_pro/view/LoginFormCode.dart';
-class HomePage extends StatefulWidget{
+class HostPage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return new _HomePage();
+    return new _HostPage();
   }
 }
-class _HomePage extends State<HomePage>{
-  int _selectedIndex = 1;
+class _HostPage extends State<HostPage>{
+  int _selectedIndex = 0;
+  String content="";
   final _widgetOptions = [
     Text('Index 0: Home'),
     Text('Index 1: Business'),
@@ -53,9 +55,10 @@ class _HomePage extends State<HomePage>{
           child:new Column(
             children: <Widget>[
               new SizedBox(
-                height:200,
+                height:240,
                 child:new BannerView(),
               ),
+              getTabView()
             ],
           )
       ),
@@ -67,7 +70,7 @@ class _HomePage extends State<HomePage>{
         BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('my')),
       ],
         currentIndex: _selectedIndex,
-        fixedColor: Colors.green,
+//        fixedColor: Colors.green,
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
       )
@@ -77,5 +80,37 @@ class _HomePage extends State<HomePage>{
     setState(() {
       _selectedIndex = index;
     });
+  }
+  Widget getTabView(){
+      switch (_selectedIndex){
+        case 0:
+          content="Home";
+          break;
+        case 1:
+          content="Business";
+          break;
+        case 2:
+          content="aa";
+          break;
+        case 3:
+          content="my";
+          break;
+        default:
+          break;
+      }
+      Text tabView=new Text("Tab_$content",style: new TextStyle(
+          fontSize: 25,
+          color: Colors.white
+      ));
+      RaisedButton button=new RaisedButton(onPressed: (){
+//         Navigator.pushNamed(context, "/list");
+        Navigator.push( context,
+            new MaterialPageRoute(builder: (context) {
+              return new HomePage();
+            },fullscreenDialog:false,));
+      },child: tabView,
+      padding: EdgeInsets.all(10),);
+      Widget view= Container(child: button,margin: EdgeInsets.only(top: 50));
+      return view;
   }
 }

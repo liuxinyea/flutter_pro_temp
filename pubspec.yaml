@@ -1,6 +1,7 @@
 name: my_first_flutter_pro
 description: A new Flutter project.
-
+#version:1.0.0
+#应用或包依赖的其它包或插件。
 dependencies:
   flutter:
     sdk: flutter
@@ -10,6 +11,7 @@ dependencies:
   english_words: ^3.1.0
   shared_preferences: ^0.4.3
   carousel_slider: ^1.0.1
+#  开发环境依赖的工具包
 dev_dependencies:
   flutter_test:
     sdk: flutter
