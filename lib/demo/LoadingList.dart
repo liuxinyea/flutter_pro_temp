@@ -1,23 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
-void main() {
-  runApp(new SampleApp());
-}
-
-class SampleApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'this is title',
-      theme: new ThemeData(
-        primarySwatch: Colors.orange,
-      ),
-      home: new SampleAppPage(),
-    );
-  }
-}
-
+import 'package:my_first_flutter_pro/view/LoadListView.dart';
 class SampleAppPage extends StatefulWidget {
   SampleAppPage({Key key}) :super(key: key);
 
@@ -43,13 +26,11 @@ class _SampleAppPageState extends State<SampleAppPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
+        centerTitle:true,
         title: new Text("标题"
         ),
-        backgroundColor: Colors.blue,
       ),
-      body: new Center(
-        child:new Text("文本是$_text"),
-      ),
+      body:   new InfiniteListView(),
       floatingActionButton: new FloatingActionButton(
         onPressed: _toggle,
         tooltip: 'Update Text',

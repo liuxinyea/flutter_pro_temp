@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_pro/demo/CommentWidget.dart';
+import 'package:my_first_flutter_pro/demo/ContainerDemo.dart';
 import 'package:my_first_flutter_pro/demo/FormDemo.dart';
+import 'package:my_first_flutter_pro/demo/StackAndPositionedDemo.dart';
+import 'package:my_first_flutter_pro/demo/SuperScrollerListDemo.dart';
 import 'package:my_first_flutter_pro/demo/TapBoxA.dart';
+import 'package:my_first_flutter_pro/demo/LoadingList.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
+import 'package:my_first_flutter_pro/demo/WrapLayoutDemo.dart';
+import 'package:my_first_flutter_pro/view/LoadListView.dart';
 //首页界面
 class HomePage extends StatefulWidget{
   @override
@@ -18,13 +25,14 @@ class _HomePage extends State<HomePage>{
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
          title: Text("Home"),
       ),
       body:new Scrollbar(
           child:SingleChildScrollView(
             child:  new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                new TapBoxA(),
                 new Text.rich(TextSpan(
                     children: [
                       TextSpan(
@@ -40,109 +48,115 @@ class _HomePage extends State<HomePage>{
                     ]
                 )),
                 /*按钮使用*/
-                new FlatButton(
-                  color: Colors.blue,
-                  highlightColor: Colors.blue[700],
-                  colorBrightness: Brightness.dark,
-                  splashColor: Colors.grey,
-                  child: Text("表单Form例子"),
-                  shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-                  onPressed:(){
-                    Navigator.push( context,
-                        new MaterialPageRoute(builder: (context) {
-                          return new FormTestRoute();
-                        },fullscreenDialog:false,));
-                  },
-                ),
-                /*图片使用*/
-                new Image(
-                  image: NetworkImage(
-                      "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"),
-                  width:200.0,
-                  color: Colors.blue,
-                  colorBlendMode: BlendMode.color,
-                  fit: BoxFit.cover,
-                ),
-                new Image.network(
-                  "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
-                  width: 100.0,
-                  height:150,
-                  repeat: ImageRepeat.repeatY,
-                ),
-                new Switch(
-                    value: _switchSelected,
-                    onChanged: (value){
-                      setState(() {
-                         _switchSelected=value;
-                      });
-                }),
-                new Checkbox(
-                  value: _checkboxSelected,
-//                  activeColor: Colors.green, //选中时的颜色
-                  onChanged:(value){
-                    setState(() {
-                      _checkboxSelected=value;
-                    });
-                  } ,
-                ),
-                new  Column(
-                  children: <Widget>[
-                    //Flex的两个子widget按1：2来占据水平空间
-                    new Flex(
-                      direction: Axis.horizontal,
-                      children: <Widget>[
-                        Expanded(
-                          flex: 1,
-                          child: Container(
-                            height: 30.0,
-                            color: Colors.red,
-                            child: new Text("flex:1"),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            height: 30.0,
-                            color: Colors.green,
-                            child: new Text("flex:2"),
-                          ),
-                        ),
-                      ],
-                    ),
-                    new Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
-                      child: SizedBox(
-                        height: 100.0,
-                        //Flex的三个子widget，在垂直方向按2：1：1来占用100像素的空间
-                        child: new Flex(
-                          direction: Axis.vertical,
-                          children: <Widget>[
-                            Expanded(
-                              flex: 2,
-                              child: Container(
-                                height: 30.0,
-                                color: Colors.red,
-                                child: new Text("flex:2"),
-                              ),
-                            ),
-                            /*间隔*/
-                            Spacer(
-                              flex: 1,
-                            ),
-                            Expanded(
-                              flex: 1,
-                              child: Container(
-                                height: 30.0,
-                                color: Colors.green,
-                                child: new Text("flex:1"),
-                              ),
-                            ),
-                          ],
-                        ),
+                new Container(
+                  margin: EdgeInsets.only(top: 20),
+                  padding: EdgeInsets.only(left: 20),
+                  child:  new Wrap(
+                    spacing: 25,
+                    runSpacing: 10,
+                    children: <Widget>[
+                      new FlatButton(
+                        color: Colors.blue,
+                        highlightColor: Colors.blue[700],
+                        colorBrightness: Brightness.dark,
+                        splashColor: Colors.grey,
+                        child: Text("表单Form例子"),
+                        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        onPressed:(){
+                          Navigator.push( context,
+                              new MaterialPageRoute(builder: (context) {
+                                return new FormTestRoute();
+                              },fullscreenDialog:false,));
+                        },
                       ),
-                    ),
-                  ],
+                      new FlatButton(
+                        color: Colors.blue,
+                        highlightColor: Colors.blue[700],
+                        colorBrightness: Brightness.dark,
+                        splashColor: Colors.grey,
+                        child: Text("流式布局Demo"),
+                        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        onPressed:(){
+                          Navigator.push( context,
+                              new MaterialPageRoute(builder: (context) {
+                                return new WrapPageDemo();
+                              },fullscreenDialog:false));
+                        },
+                      ),
+                      new FlatButton(
+                        color: Colors.blue,
+                        highlightColor: Colors.blue[700],
+                        colorBrightness: Brightness.dark,
+                        splashColor: Colors.grey,
+                        child: Text("层叠布局Demo"),
+                        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        onPressed:(){
+                          Navigator.push( context,
+                              new MaterialPageRoute(builder: (context) {
+                                return new StackAndPositionedPage();
+                              },fullscreenDialog:false));
+                        },
+                      ),
+                      new FlatButton(
+                        color: Colors.blue,
+                        highlightColor: Colors.blue[700],
+                        colorBrightness: Brightness.dark,
+                        splashColor: Colors.grey,
+                        child: Text("常用小控件"),
+                        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        onPressed:(){
+                          Navigator.push( context,
+                              new MaterialPageRoute(builder: (context) {
+                                return new CommentWidgetPage();
+                              },fullscreenDialog:false));
+                        },
+                      ),
+                      new FlatButton(
+                        color: Colors.blue,
+                        highlightColor: Colors.blue[700],
+                        colorBrightness: Brightness.dark,
+                        splashColor: Colors.grey,
+                        child: Text("容器类widget"),
+                        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        onPressed:(){
+                          Navigator.push( context,
+                              new MaterialPageRoute(builder: (context) {
+                                return new ContainerPage();
+                              },fullscreenDialog:false));
+                        },
+                      ),
+                      new FlatButton(
+                        color: Colors.blue,
+                        highlightColor: Colors.blue[700],
+                        colorBrightness: Brightness.dark,
+                        splashColor: Colors.grey,
+                        child: Text("无限列表"),
+                        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        onPressed:(){
+                          Navigator.push( context,
+                              new MaterialPageRoute(builder: (context) {
+                                return new SampleAppPage();
+                              },fullscreenDialog:false));
+                        },
+                      ),
+                      new FlatButton(
+                        color: Colors.blue,
+                        highlightColor: Colors.blue[700],
+                        colorBrightness: Brightness.dark,
+                        splashColor: Colors.grey,
+                        child: Text("Sliver"),
+                        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                        onPressed:(){
+                          Navigator.push( context,
+                              new MaterialPageRoute(builder: (context) {
+                                return new CustomScrollViewTestRoute();
+                              },fullscreenDialog:false));
+                        },
+                      ),
+                    ],
+                  ),
                 )
+
               ],
             ),
           )
