@@ -51,6 +51,7 @@ class _HostPage extends State<HostPage> with SingleTickerProviderStateMixin{
           ],
           backgroundColor: Colors.green,
         ),
+        //抽屉菜单
         drawer:new Drawer(
           child: MediaQuery.removePadding(
             context: context,
@@ -101,20 +102,8 @@ class _HostPage extends State<HostPage> with SingleTickerProviderStateMixin{
             padding: EdgeInsets.only(left: 0,right: 0,top:0),
             child:new Column(
               children: <Widget>[
-                new TabBar(   //生成Tab菜单
-                  controller: _tabController,
-                  tabs: tabs.map((e) => Tab(text: e)).toList(),
-                  labelColor: Colors.green,
-                  labelStyle: TextStyle(
-                    fontSize:18
-                  ),
-                  unselectedLabelColor: Colors.black26,
-                unselectedLabelStyle: TextStyle(
-                  fontSize:18
-                ),
-
-              ),
-                getTabView(),
+                 BannerView(),
+                 getTabView(),
               ],
             )
         ),
