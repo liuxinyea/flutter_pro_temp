@@ -51,6 +51,7 @@ class _CommentWidgetPage extends State<CommentWidgetPage>{
                   },
                 ),
                 /*图片使用*/
+                Text("网络图片加方式1"),
                 new Image(
                   image: NetworkImage(
                       "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"),
@@ -59,10 +60,11 @@ class _CommentWidgetPage extends State<CommentWidgetPage>{
                   colorBlendMode: BlendMode.color,
                   fit: BoxFit.cover,
                 ),
+                Text("网络图片加方式2"),
                 new Image.network(
                   "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
                   width: 100.0,
-                  height:150,
+//                  height:150,
                   repeat: ImageRepeat.repeatY,
                 ),
                 new Switch(

@@ -52,13 +52,13 @@ class _BannerViewState extends State<BannerView>{
             aspectRatio:2/1,
             // 切换时当前页面逐渐变小，新页面逐渐变大直至完全替代当前页面，
             // 默认为`true`。
-            distortion: false,
+//            distortion: false,
             // 视窗中页面更新时的回调函数。
-            updateCallback: (index) {
-              setState(() {
-                _current = index;
-              });
-            },
+//            updateCallback: (index) {
+//              setState(() {
+//                _current = index;
+//              });
+//            },
         ),
         // TODO:实现“进度条”
         new Row(

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/demo/ListPage.dart';
-import 'package:my_first_flutter_pro/demo/MyTabBar.dart';
 import 'package:my_first_flutter_pro/host.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   /*捕获flutter的异常*/
-  FlutterError.onError = (FlutterErrorDetails details) {
+//  FlutterError.onError = (FlutterErrorDetails details) {
 //    reportError(details);
-  };
+//  };
    //MaterialApp是管理Material风格APP的脚手架
   runApp(new MaterialApp(
     title: 'My app', // used by the OS task switcher
