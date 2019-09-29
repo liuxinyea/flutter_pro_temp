@@ -27,7 +27,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle:true,
-        title: new Text("标题"
+        title: new Text("无限列表"
         ),
       ),
       body:   new InfiniteListView(),
