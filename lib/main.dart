@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/demo/ListPage.dart';
 import 'package:my_first_flutter_pro/host.dart';
+import 'package:my_first_flutter_pro/prictice/Provider/ProviderRoute.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
+import 'package:my_first_flutter_pro/prictice/inheritedWidget/InheritedWidgetTestRoute.dart';
 
 void main() {
   /*捕获flutter的异常*/
@@ -10,7 +12,7 @@ void main() {
 //  };
    //MaterialApp是管理Material风格APP的脚手架
   runApp(new MaterialApp(
-    title: 'My app', // used by the OS task switcher
+    title: 'FlutterApp', // used by the OS task switcher
     /*MaterialApp的首页*/
     home: new LoginHomePage(),
     /*设置app的主题样式*/
@@ -28,6 +30,8 @@ void main() {
       '/login': (BuildContext context) => LoginHomePage(),
       '/home': (BuildContext context) =>HostPage(),
       '/list': (BuildContext context) => ListPage(),
+      '/inherited_widget': (BuildContext context) => InheritedWidgetTestRoute(),
+      '/provider_demo': (BuildContext context) => ProviderRoute(),
     },
   ));
 }
