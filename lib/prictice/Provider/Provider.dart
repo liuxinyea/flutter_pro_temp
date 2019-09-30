@@ -15,21 +15,22 @@ class InheritedProvider<T> extends InheritedWidget {
 }
 
 class MyChangeNotifier implements Listenable{
+
+  List listeners=[];
+
   @override
   void addListener(listener) {
-    // TODO: implement addListener
-
+     listeners.add(listener);
   }
 
   @override
   void removeListener(listener) {
-    // TODO: implement removeListener
-
+    listeners.remove(listener);
   }
 
   void notifyListener(){
     //通知所有监听器，触发监听器回调
-
+    listeners.forEach((item)=>item());
   }
 
 }

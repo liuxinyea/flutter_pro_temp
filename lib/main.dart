@@ -1,9 +1,8 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_pro/demo/ListPage.dart';
-import 'package:my_first_flutter_pro/host.dart';
-import 'package:my_first_flutter_pro/prictice/Provider/ProviderRoute.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
-import 'package:my_first_flutter_pro/prictice/inheritedWidget/InheritedWidgetTestRoute.dart';
+import 'package:my_first_flutter_pro/router.dart';
 
 void main() {
   /*捕获flutter的异常*/
@@ -14,7 +13,7 @@ void main() {
   runApp(new MaterialApp(
     title: 'FlutterApp', // used by the OS task switcher
     /*MaterialApp的首页*/
-    home: new LoginHomePage(),
+    home: Router().getPage('/home'),
     /*设置app的主题样式*/
     theme: new ThemeData(
       primarySwatch: Colors.green,
@@ -26,13 +25,8 @@ void main() {
       )
     ),
     /*MaterialApp的路由管理*/
-    routes: <String, WidgetBuilder> {
-      '/login': (BuildContext context) => LoginHomePage(),
-      '/home': (BuildContext context) =>HostPage(),
-      '/list': (BuildContext context) => ListPage(),
-      '/inherited_widget': (BuildContext context) => InheritedWidgetTestRoute(),
-      '/provider_demo': (BuildContext context) => ProviderRoute(),
-    },
+    routes:Router().routers(),
+
   ));
 }
 

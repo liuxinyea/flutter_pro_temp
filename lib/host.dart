@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/page/DemoPage.dart';
+import 'package:my_first_flutter_pro/prictice/color@theme/PricticeDemo.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
 class HostPage extends StatefulWidget{
   @override
@@ -106,7 +107,7 @@ class _HostPage extends State<HostPage>{
         bottomNavigationBar:new BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('官方Demo')),
-            BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('工作')),
+            BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('练习')),
             BottomNavigationBarItem(icon: Icon(Icons.camera), title: Text('功能')),
             BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('我的')),
           ],
@@ -125,8 +126,8 @@ class _HostPage extends State<HostPage>{
           content=new DemoPage();
           break;
         case 1:
-          contentTitle="工作";
-          content=new Text("$contentTitle");
+          contentTitle="练习";
+          content=new PricticeDemo();
           break;
         case 2:
           contentTitle="功能";

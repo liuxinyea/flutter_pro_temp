@@ -10,14 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="586dedf4-e532-4edd-bbcc-7128db06c442" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/prictice/Provider/Provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/prictice/Provider/ProviderRoute.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/prictice/Provider/UseProviderDemo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/prictice/event/EventBus.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/prictice/inheritedWidget/InheritedWidgetTestRoute.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/prictice/inheritedWidget/Inheritedwidget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/prictice/Provider/Provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/prictice/Provider/Provider.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -35,16 +30,17 @@
         <counts>
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="dart" value="27" />
+          <entry key="dart" value="28" />
           <entry key="gradle" value="2" />
           <entry key="xml" value="2" />
           <entry key="yaml" value="2" />
@@ -52,7 +48,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Dart" value="27" />
+          <entry key="Dart" value="28" />
           <entry key="Groovy" value="2" />
           <entry key="XML" value="2" />
           <entry key="YAML" value="2" />
@@ -60,12 +56,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="1179" />
+          <entry key="dart" value="1253" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="1179" />
+          <entry key="Dart" value="1253" />
         </counts>
       </usages-collector>
     </session>
@@ -76,31 +72,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/view/BannerView.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-              <folding>
-                <element signature="e#10#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/prictice/Provider/UseProviderDemo.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -108,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/prictice/Provider/Provider.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="204">
+              <caret line="51" column="12" lean-forward="true" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -120,7 +95,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/prictice/Provider/ProviderRoute.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="323">
               <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -132,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="323">
+              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -189,7 +164,6 @@
         <option value="$PROJECT_DIR$/lib/demo/weightDemo.dart" />
         <option value="$PROJECT_DIR$/lib/demo/gridViewDemo.dart" />
         <option value="$PROJECT_DIR$/lib/demo/demo1.dart" />
-        <option value="$PROJECT_DIR$/lib/demo/ListPage.dart" />
         <option value="$PROJECT_DIR$/lib/demo/BannerView.dart" />
         <option value="$PROJECT_DIR$/lib/view/LoginFormCode.dart" />
         <option value="$PROJECT_DIR$/lib/demo/MyTabBar.dart" />
@@ -223,16 +197,17 @@
         <option value="$PROJECT_DIR$/lib/prictice/UseProviderDemo.dart" />
         <option value="$PROJECT_DIR$/lib/prictice/Provider/ProviderRoute.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/demo/ListPage.dart" />
         <option value="$PROJECT_DIR$/lib/prictice/Provider/Provider.dart" />
         <option value="$PROJECT_DIR$/lib/prictice/Provider/UseProviderDemo.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
-    <option name="height" value="1040" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -271,6 +246,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,19 +265,11 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="prictice" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="my_flutter_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_flutter_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="prictice" type="462c0819:PsiDirectoryNode" />
-              <item name="Provider" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,7 +370,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1296" height="1040" extended-state="0" />
+    <frame x="1358" y="-8" width="1296" height="1036" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4936306" visible="true" weight="0.2564725" />
@@ -415,7 +383,7 @@
       <window_info id="Favorites" order="7" sideWeight="0.5063694" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4904762" visible="true" weight="0.3116022" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4904762" visible="true" weight="0.3107658" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2861991" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -514,13 +482,6 @@
     <entry file="file://$PROJECT_DIR$/lib/page/homePage.dart" />
     <entry file="file://D:/Flutter/flutter/packages/flutter/lib/src/material/app_bar.dart" />
     <entry file="file://$PROJECT_DIR$/lib/demo/ScrollerController.dart" />
-    <entry file="file://$PROJECT_DIR$/lib/demo/ListPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Flutter/flutter/packages/flutter/lib/src/widgets/scroll_view.dart" />
     <entry file="file://D:/Flutter/flutter/packages/flutter/lib/src/material/list_tile.dart" />
     <entry file="file://D:/Flutter/flutter/packages/flutter/lib/src/widgets/banner.dart" />
@@ -556,13 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -612,26 +566,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/view/BannerView.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding>
-            <element signature="e#10#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/prictice/inheritedWidget/_TestWidget.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/prictice/inheritedWidget/_TestWidget.dart" />
     <entry file="file://$PROJECT_DIR$/lib/prictice/event/EventBus.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -643,9 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,16 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/Flutter/flutter/packages/flutter/lib/src/widgets/framework.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -687,16 +609,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/prictice/Provider/Provider.dart">
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="187">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/view/BannerView.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+          <folding>
+            <element signature="e#10#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/demo/ListPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/prictice/Provider/ProviderRoute.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="323">
           <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -706,11 +655,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/prictice/Provider/UseProviderDemo.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/prictice/Provider/Provider.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="51" column="12" lean-forward="true" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
         </state>
       </provider>
     </entry>
