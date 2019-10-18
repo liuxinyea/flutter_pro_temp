@@ -1,4 +1,4 @@
-import 'dart:js';
+//import 'dart:js';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -216,7 +216,9 @@ class _DialogTestRoute extends State<DialogTestRoute> {
         var child = Column(
           children: <Widget>[
             Text("请选择"),
-            Radio(),
+            Radio(groupValue: null, onChanged: (int value) {
+              
+            }, value: 1,),
             StatefulBuilder(
               builder: (BuildContext context, _setState) {
                 return Switch(
