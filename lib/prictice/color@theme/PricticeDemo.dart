@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/prictice/color@theme/NavBar@Color.dart';
 import 'package:my_first_flutter_pro/prictice/dialog/DialogTestRoute.dart';
+import 'package:my_first_flutter_pro/prictice/event/GestureDetectorTest.dart';
 import 'package:my_first_flutter_pro/prictice/event/ListenerTest.dart';
 import 'package:my_first_flutter_pro/prictice/future/FutureTestRoute.dart';
 import 'package:my_first_flutter_pro/prictice/future/StreamTestRoute.dart';
@@ -23,7 +24,8 @@ class PricticeDemo extends StatelessWidget {
           getBtn("Future", FutureTestRoute()),
           getBtn("Stream", StreamTestRoute()),
           getBtn("Dialog", DialogTestRoute()),
-          getBtn("Event", ListenerTestRoute())
+          getBtn("Event", ListenerTestRoute()),
+          getBtn("GetureDetector", GestureDetectorTestRoute())
         ],
       ),
     );

@@ -13,6 +13,7 @@ class _StreamTestRoute extends State<StreamTestRoute> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
+      color: Colors.white,
       child: Column(
         children: <Widget>[
           AppBar(

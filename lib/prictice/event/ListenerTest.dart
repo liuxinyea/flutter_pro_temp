@@ -20,11 +20,21 @@ class _ListenerTestRouteState extends State<StatefulWidget>{
           color: Colors.blue,
           width: 100.0,
           height: 50.0,
-          child: Text(_event?.toString()??"",
-          style: TextStyle(color: Colors.white,
-          fontSize: 14
-          )
-          ),
+            child: Column(
+              children: <Widget>[
+                AppBar(
+                  title:Text("Listener"),
+                  centerTitle: true
+                ),
+                new Center(
+                    child:Text(_event?.toString()??"",
+                    style: TextStyle(color: Colors.white,
+                        fontSize: 24
+                    )
+                    )
+                 ),
+              ],
+           ),
       ),
       onPointerDown: (PointerDownEvent event){
            setState(() {
