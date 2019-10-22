@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_pro/prictice/animation/ScaleAnimationRoute.dart';
 import 'package:my_first_flutter_pro/prictice/color@theme/NavBar@Color.dart';
 import 'package:my_first_flutter_pro/prictice/dialog/DialogTestRoute.dart';
 import 'package:my_first_flutter_pro/prictice/event/EventBusTestRoute.dart';
@@ -31,7 +33,8 @@ class PricticeDemo extends StatelessWidget {
           getBtn("GetureDetector", GestureDetectorTestRoute()),
           getBtn("EventBus", EventBusTestRoute()),
           getBtn("Notification", NotificationTestRoute()),
-          getBtn("MyNotification", CustomerNotificationRoute())
+          getBtn("MyNotification", CustomerNotificationRoute()),
+          getBtn("ScaleAnimation", ScaleAnimationRoute())
         ],
       ),
     );
@@ -48,7 +51,7 @@ class PricticeDemo extends StatelessWidget {
       onPressed: () {
         Navigator.push(
             _context,
-            new MaterialPageRoute(
+            new CupertinoPageRoute(
               builder: (context) {
                 return demoPage;
               },
