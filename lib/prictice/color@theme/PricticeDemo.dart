@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/prictice/color@theme/NavBar@Color.dart';
 import 'package:my_first_flutter_pro/prictice/dialog/DialogTestRoute.dart';
+import 'package:my_first_flutter_pro/prictice/event/EventBusTestRoute.dart';
 import 'package:my_first_flutter_pro/prictice/event/GestureDetectorTest.dart';
 import 'package:my_first_flutter_pro/prictice/event/ListenerTest.dart';
+import 'package:my_first_flutter_pro/prictice/event/notification/CustomerNotification.dart';
+import 'package:my_first_flutter_pro/prictice/event/notification/NotificationRoute.dart';
 import 'package:my_first_flutter_pro/prictice/future/FutureTestRoute.dart';
 import 'package:my_first_flutter_pro/prictice/future/StreamTestRoute.dart';
 import 'ThemeDemo.dart';
@@ -14,7 +17,7 @@ class PricticeDemo extends StatelessWidget {
     // TODO: implement build
     this._context = context;
     return Container(
-      alignment: Alignment.center,
+//      alignment: Alignment.center,
       child: new Wrap(
         spacing: 25,
         runSpacing: 10,
@@ -25,7 +28,10 @@ class PricticeDemo extends StatelessWidget {
           getBtn("Stream", StreamTestRoute()),
           getBtn("Dialog", DialogTestRoute()),
           getBtn("Event", ListenerTestRoute()),
-          getBtn("GetureDetector", GestureDetectorTestRoute())
+          getBtn("GetureDetector", GestureDetectorTestRoute()),
+          getBtn("EventBus", EventBusTestRoute()),
+          getBtn("Notification", NotificationTestRoute()),
+          getBtn("MyNotification", CustomerNotificationRoute())
         ],
       ),
     );

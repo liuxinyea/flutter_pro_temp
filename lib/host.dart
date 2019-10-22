@@ -13,14 +13,37 @@ class _HostPage extends State<HostPage>{
   int _selectedIndex = 0;
   Widget content;
   String contentTitle="Demo";
+  final bodyList = [DemoPage(), PricticeDemo(),
+  Center(child:Text("功能")),Center(child:Text("我的"))];
+  final pageController = PageController();
+  void onPageChanged(int index) {
+    setState(() {
+      _selectedIndex = index;
+      switch (_selectedIndex){
+        case 0:
+          contentTitle="官方Widget";
+          break;
+        case 1:
+          contentTitle="练习";
+          break;
+        case 2:
+          contentTitle="功能";
+          break;
+        case 3:
+          contentTitle="我的";
+          break;
+        default:
+          break;
+      }
+    });
+  }
   @override
   void initState() {
     super.initState();
-    content=new DemoPage();
   }
   @override
   Widget build(BuildContext context) {
-//
+     
     // TODO: implement build
     return new Scaffold(
         appBar: new AppBar(
@@ -94,15 +117,10 @@ class _HostPage extends State<HostPage>{
             ),
           ),
         ),
-        body: new Container(
-            padding: EdgeInsets.only(left: 0,right: 0,top:0),
-            child:new Column(
-              children: <Widget>[
-                 Center(
-                   child: content,
-                 )
-              ],
-            )
+        body:PageView(
+            children:bodyList,
+            onPageChanged:onPageChanged,
+           controller: pageController,
         ),
         bottomNavigationBar:new BottomNavigationBar(
           items: <BottomNavigationBarItem>[
@@ -118,24 +136,22 @@ class _HostPage extends State<HostPage>{
     );
   }
   void _onItemTapped(int index) {
+
     setState(() {
       _selectedIndex = index;
+      pageController.jumpToPage(index);
       switch (_selectedIndex){
         case 0:
           contentTitle="官方Widget";
-          content=new DemoPage();
           break;
         case 1:
           contentTitle="练习";
-          content=new PricticeDemo();
           break;
         case 2:
           contentTitle="功能";
-          content=new Text("$contentTitle");
           break;
         case 3:
           contentTitle="我的";
-          content=new Text("$contentTitle");
           break;
         default:
           break;

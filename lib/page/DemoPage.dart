@@ -6,6 +6,7 @@ import 'package:my_first_flutter_pro/demo/ListPage.dart';
 import 'package:my_first_flutter_pro/demo/StackAndPositionedDemo.dart';
 import 'package:my_first_flutter_pro/demo/SuperScrollerListDemo.dart';
 import 'package:my_first_flutter_pro/demo/LoadingList.dart';
+import 'package:my_first_flutter_pro/prictice/event/EventBus.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
 import 'package:my_first_flutter_pro/demo/WrapLayoutDemo.dart';
 class DemoPage extends StatefulWidget{
@@ -15,9 +16,23 @@ class DemoPage extends StatefulWidget{
     return new _DemoPage();
   }
 }
-class _DemoPage extends State<DemoPage>{
-  bool _switchSelected=false; //维护单选开关状态
-  bool _checkboxSelected=true;//维护复选框状态
+class _DemoPage extends State<DemoPage> with AutomaticKeepAliveClientMixin{
+  var bus=new EventBus();
+  var _message="hello";
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    bus.on("updateMessage", (arg){
+      if(mounted){
+        setState(() {
+          _message=arg;
+          print(_message);
+        });
+      }
+    });
+  }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -42,6 +57,7 @@ class _DemoPage extends State<DemoPage>{
                     getBtn("无限列表",new SampleAppPage()),
                     getBtn("Sliver",new CustomScrollViewTestRoute()),
                     getBtn("通用列表",new ListPage()),
+                    getText()
             ],
                 ),
               )
@@ -49,6 +65,19 @@ class _DemoPage extends State<DemoPage>{
           ),
         )
     );
+  }
+  Widget getText(){
+     return Listener(
+       child: Text(_message) ,
+       onPointerDown: (details){
+         _message+="111";
+         print(_message);
+         setState(() {
+
+         });
+       },
+     );
+
   }
   Widget getBtn(String btnName,Widget demoPage){
      return new FlatButton(
@@ -66,4 +95,8 @@ class _DemoPage extends State<DemoPage>{
        },
      );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }
