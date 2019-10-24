@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter_pro/prictice/animation/HeroAnimationRoute.dart';
 import 'package:my_first_flutter_pro/prictice/animation/ScaleAnimationRoute.dart';
+import 'package:my_first_flutter_pro/prictice/animation/animation_swicher_route.dart';
+import 'package:my_first_flutter_pro/prictice/animation/stagger_route.dart';
 import 'package:my_first_flutter_pro/prictice/color@theme/NavBar@Color.dart';
 import 'package:my_first_flutter_pro/prictice/dialog/DialogTestRoute.dart';
 import 'package:my_first_flutter_pro/prictice/event/EventBusTestRoute.dart';
@@ -34,7 +37,10 @@ class PricticeDemo extends StatelessWidget {
           getBtn("EventBus", EventBusTestRoute()),
           getBtn("Notification", NotificationTestRoute()),
           getBtn("MyNotification", CustomerNotificationRoute()),
-          getBtn("ScaleAnimation", ScaleAnimationRoute())
+          getBtn("ScaleAnimation", ScaleAnimationRoute()),
+          getBtn("HeroAnimation", HeroAnimationRoute()),
+          getBtn("StaggerAnimation", StaggerRoute()),
+          getBtn("AnimationSwicher", AnimationSwicherRoute()),
         ],
       ),
     );
@@ -51,12 +57,16 @@ class PricticeDemo extends StatelessWidget {
       onPressed: () {
         Navigator.push(
             _context,
-            new CupertinoPageRoute(
-              builder: (context) {
-                return demoPage;
-              },
-              fullscreenDialog: false,
-            ));
+            PageRouteBuilder(
+              transitionDuration: Duration(milliseconds: 500),
+              pageBuilder: (context,animation,secondaryAnimation){
+                   return new FadeTransition(
+                       opacity: animation,
+                       child: demoPage,
+                   );
+              }
+            )
+        );
       },
     );
   }
