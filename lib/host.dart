@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_pro/page/DemoPage.dart';
+import 'package:my_first_flutter_pro/prictice/color@theme/PricticeDemo.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
 class HostPage extends StatefulWidget{
   @override
@@ -12,15 +13,37 @@ class _HostPage extends State<HostPage>{
   int _selectedIndex = 0;
   Widget content;
   String contentTitle="Demo";
-  List tabs = ["新闻", "历史", "图片"];
+  final bodyList = [DemoPage(), PricticeDemo(),
+  Center(child:Text("功能")),Center(child:Text("我的"))];
+  final pageController = PageController();
+  void onPageChanged(int index) {
+    setState(() {
+      _selectedIndex = index;
+      switch (_selectedIndex){
+        case 0:
+          contentTitle="官方Widget";
+          break;
+        case 1:
+          contentTitle="练习";
+          break;
+        case 2:
+          contentTitle="功能";
+          break;
+        case 3:
+          contentTitle="我的";
+          break;
+        default:
+          break;
+      }
+    });
+  }
   @override
   void initState() {
     super.initState();
-    content=new DemoPage();
   }
   @override
   Widget build(BuildContext context) {
-//
+     
     // TODO: implement build
     return new Scaffold(
         appBar: new AppBar(
@@ -94,20 +117,15 @@ class _HostPage extends State<HostPage>{
             ),
           ),
         ),
-        body: new Container(
-            padding: EdgeInsets.only(left: 0,right: 0,top:0),
-            child:new Column(
-              children: <Widget>[
-                 Center(
-                   child: content,
-                 )
-              ],
-            )
+        body:PageView(
+            children:bodyList,
+            onPageChanged:onPageChanged,
+           controller: pageController,
         ),
         bottomNavigationBar:new BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('官方Demo')),
-            BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('工作')),
+            BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('练习')),
             BottomNavigationBarItem(icon: Icon(Icons.camera), title: Text('功能')),
             BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('我的')),
           ],
@@ -118,24 +136,22 @@ class _HostPage extends State<HostPage>{
     );
   }
   void _onItemTapped(int index) {
+
     setState(() {
       _selectedIndex = index;
+      pageController.jumpToPage(index);
       switch (_selectedIndex){
         case 0:
           contentTitle="官方Widget";
-          content=new DemoPage();
           break;
         case 1:
-          contentTitle="工作";
-          content=new Text("$contentTitle");
+          contentTitle="练习";
           break;
         case 2:
           contentTitle="功能";
-          content=new Text("$contentTitle");
           break;
         case 3:
           contentTitle="我的";
-          content=new Text("$contentTitle");
           break;
         default:
           break;

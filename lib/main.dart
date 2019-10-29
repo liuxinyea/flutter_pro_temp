@@ -1,7 +1,8 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_pro/demo/ListPage.dart';
-import 'package:my_first_flutter_pro/host.dart';
 import 'package:my_first_flutter_pro/util/Toast.dart';
+import 'package:my_first_flutter_pro/router.dart';
 
 void main() {
   /*捕获flutter的异常*/
@@ -10,9 +11,9 @@ void main() {
 //  };
    //MaterialApp是管理Material风格APP的脚手架
   runApp(new MaterialApp(
-    title: 'My app', // used by the OS task switcher
+    title: 'FlutterApp', // used by the OS task switcher
     /*MaterialApp的首页*/
-    home: new LoginHomePage(),
+    home: Router().getPage('/home'),
     /*设置app的主题样式*/
     theme: new ThemeData(
       primarySwatch: Colors.green,
@@ -24,13 +25,11 @@ void main() {
       )
     ),
     /*MaterialApp的路由管理*/
-    routes: <String, WidgetBuilder> {
-      '/login': (BuildContext context) => LoginHomePage(),
-      '/home': (BuildContext context) =>HostPage(),
-      '/list': (BuildContext context) => ListPage(),
-    },
+    routes:Router().routers(),
+
   ));
 }
+
 class LoginHomePage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -130,5 +129,4 @@ class _LoginHomePage extends State<LoginHomePage>{
       ),
     );
   }
-
 }

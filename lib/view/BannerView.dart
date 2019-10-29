@@ -32,33 +32,30 @@ class _BannerViewState extends State<BannerView>{
         // carousel_slider包里的轮播组件（`CarouselSlider`）组件。
         CarouselSlider(
           // 使用自定义的工人`worker`方法生成一个容器组件列表。
-          items:worker(imgList, (index,img){
-               return new Container(
-                   decoration: BoxDecoration(
-                     image:new DecorationImage(
-                         image: img,
-                         // 适应属性，如何在框里展示图像。
-                         // https://docs.flutter.io/flutter/painting/BoxFit-class.html
-                         fit: BoxFit.cover
-                     )
-                   ),
-               );
-          }),
+            items:worker(imgList, (index,img){
+                 return new Container(
+                     decoration: BoxDecoration(
+                       image:new DecorationImage(
+                           image: img,
+                           // 适应属性，如何在框里展示图像。
+                           // https://docs.flutter.io/flutter/painting/BoxFit-class.html
+                           fit: BoxFit.cover
+                       )
+                     ),
+                 );
+            }),
             // 是否自动播放，默认为`false`。
             autoPlay: true,
             // 当前页面在视窗中占用的空间，默认为`0.8`。
             viewportFraction: 1.0,
             // 宽高比例，默认为`16/9`。
             aspectRatio:2/1,
-            // 切换时当前页面逐渐变小，新页面逐渐变大直至完全替代当前页面，
-            // 默认为`true`。
-//            distortion: false,
             // 视窗中页面更新时的回调函数。
-//            updateCallback: (index) {
-//              setState(() {
-//                _current = index;
-//              });
-//            },
+            onPageChanged: (index) {
+              setState(() {
+                _current = index;
+              });
+            },
         ),
         // TODO:实现“进度条”
         new Row(
