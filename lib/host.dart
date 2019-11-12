@@ -125,7 +125,7 @@ class _HostPage extends State<HostPage>{
         bottomNavigationBar:new BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('官方Demo')),
-            BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('练习')),
+            BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('UI练习')),
             BottomNavigationBarItem(icon: Icon(Icons.camera), title: Text('功能')),
             BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('我的')),
           ],
