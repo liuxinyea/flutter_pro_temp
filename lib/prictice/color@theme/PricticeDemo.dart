@@ -6,6 +6,10 @@ import 'package:my_first_flutter_pro/prictice/animation/animation_swicher_route.
 import 'package:my_first_flutter_pro/prictice/animation/stagger_route.dart';
 import 'package:my_first_flutter_pro/prictice/animation/transition_widget_route.dart';
 import 'package:my_first_flutter_pro/prictice/color@theme/NavBar@Color.dart';
+import 'package:my_first_flutter_pro/prictice/customerWidget/CustomerPaintRoute.dart';
+import 'package:my_first_flutter_pro/prictice/customerWidget/GradientButtonRoute.dart';
+import 'package:my_first_flutter_pro/prictice/customerWidget/GradientCircularProgressRoute.dart';
+import 'package:my_first_flutter_pro/prictice/customerWidget/TurnBoxRoute.dart';
 import 'package:my_first_flutter_pro/prictice/dialog/DialogTestRoute.dart';
 import 'package:my_first_flutter_pro/prictice/event/EventBusTestRoute.dart';
 import 'package:my_first_flutter_pro/prictice/event/GestureDetectorTest.dart';
@@ -38,11 +42,15 @@ class PricticeDemo extends StatelessWidget {
           getBtn("EventBus", EventBusTestRoute()),
           getBtn("Notification", NotificationTestRoute()),
           getBtn("MyNotification", CustomerNotificationRoute()),
-          getBtn("ScaleAnimation", ScaleAnimationRoute()),
-          getBtn("HeroAnimation", HeroAnimationRoute()),
-          getBtn("StaggerAnimation", StaggerRoute()),
-          getBtn("AnimationSwicher", AnimationSwicherRoute()),
-          getBtn("AnimatedTransition", TransitionWidgetRoute()),
+          getBtn("缩放动画", ScaleAnimationRoute()),
+          getBtn("飞行动画", HeroAnimationRoute()),
+          getBtn("交织动画", StaggerRoute()),
+          getBtn("切换动画", AnimationSwicherRoute()),
+          getBtn("动画过渡组件", TransitionWidgetRoute()),
+          getBtn("自定义Button", GradientButtonRoute()),
+          getBtn("旋转组件", TurnBoxRoute()),
+          getBtn("自绘棋盘", CustomPaintRoute()),
+          getBtn("自绘进度条", GradientCircularProgressRoute()),
         ],
       ),
     );
