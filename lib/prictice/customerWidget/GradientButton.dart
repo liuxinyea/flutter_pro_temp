@@ -34,7 +34,7 @@ class GradientButton extends StatelessWidget{
         ),
       child: Material(
         type: MaterialType.transparency,
-        child: InkWell(
+        child: InkWell(//水波纹效果组件
           splashColor: _colors.last,
           highlightColor: Colors.transparent,
           borderRadius: borderRadius,

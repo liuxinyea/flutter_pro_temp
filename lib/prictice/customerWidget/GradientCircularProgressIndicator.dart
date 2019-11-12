@@ -104,11 +104,12 @@ class _GradientCircularProgressPainter extends CustomPainter {
      if (strokeCapRound) {
        _start = asin(strokeWidth/ (size.width - strokeWidth));
      }
+     //创建矩形模板
      Rect rect = Offset(_offset, _offset) & Size(
          size.width - strokeWidth,
          size.height - strokeWidth
      );
-
+     //初始化画笔
      var paint=Paint()
      ..strokeCap=strokeCapRound?StrokeCap.round:StrokeCap.butt
      ..style=PaintingStyle.stroke
@@ -117,17 +118,19 @@ class _GradientCircularProgressPainter extends CustomPainter {
      // 先画背景
      if (backgroundColor != Colors.transparent) {
        paint.color = backgroundColor;
+       //绘制整个进度
        canvas.drawArc(rect, _start, total, true, paint);
      }
 
      if(_value>0){
+       //画笔渐变色创建
        paint.shader=SweepGradient(
            colors: colors,
            startAngle: 0.0,
            endAngle: _value,
            stops: stops
        ).createShader(rect);
-
+       //绘制进度
        canvas.drawArc(rect, _start, _value, false, paint);
 
      }
