@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff9f0f8f-503f-4db5-bcff-66ec1c587c6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/prictice/NetAndData.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/prictice/file/FileOperationRoute.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/host.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/host.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/prictice/customerWidget/GradientButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/prictice/customerWidget/GradientButton.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/prictice/customerWidget/GradientCircularProgressIndicator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/prictice/customerWidget/GradientCircularProgressIndicator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="252">
+              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -257,17 +250,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Capture Tool" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.2533512" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.2533512" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Resources Explorer" order="6" />
       <window_info id="Structure" order="7" side_tool="true" />
       <window_info id="Build Variants" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.20381232" />
       <window_info anchor="bottom" id="Android Profiler" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32991204" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32991204" />
@@ -275,7 +268,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="5" weight="0.19794722" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.29912025" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.29912025" />
       <window_info anchor="bottom" id="Flutter Performance" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.32991204" />
       <window_info anchor="right" id="Palette&#9;" order="0" />
@@ -484,8 +477,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="252">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
