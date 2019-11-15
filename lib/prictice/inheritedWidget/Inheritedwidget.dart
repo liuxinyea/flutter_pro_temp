@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+// ignore: must_be_immutable
 class ShareDataWidget extends InheritedWidget{
 
-  final int data;//共享的数据
+  int data;//共享的数据
 
   ShareDataWidget({@required this.data,Widget child}) :super(child: child);
 

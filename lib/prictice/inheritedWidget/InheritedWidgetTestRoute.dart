@@ -11,7 +11,6 @@ class InheritedWidgetTestRoute extends StatefulWidget{
 }
 
 class _InheritedWidgetTestRoute extends State<InheritedWidgetTestRoute>{
-  int count=0;
   @override
   void dispose() {
     // TODO: implement dispose
@@ -22,7 +21,7 @@ class _InheritedWidgetTestRoute extends State<InheritedWidgetTestRoute>{
     // TODO: implement build
     return Center(
       child: ShareDataWidget(
-          data:count,
+          data:10,
           child:Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -33,7 +32,7 @@ class _InheritedWidgetTestRoute extends State<InheritedWidgetTestRoute>{
               RaisedButton(
                 child: Text("Increment"),
                 //每点击一次，将count自增，然后重新build,ShareDataWidget的data将被更新
-                onPressed: () => setState(() => ++count),
+                onPressed: () => setState(() =>ShareDataWidget.of(context).data++),
               )
             ],
           )

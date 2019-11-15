@@ -20,6 +20,7 @@ class _StaggerRouteState extends State<StaggerRoute> with TickerProviderStateMix
       duration: const Duration(milliseconds: 2000),
       vsync: this
     );
+    //在指定的时间内生成0-1的值
   }
 
   Future<Null> _playAnimation() async{
