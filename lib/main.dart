@@ -13,7 +13,7 @@ void main() {
   runApp(new MaterialApp(
     title: 'FlutterApp', // used by the OS task switcher
     /*MaterialApp的首页*/
-    home: Router().getPage('/home'),
+    home: Router().getPage('/provider_demo'),
     /*设置app的主题样式*/
     theme: new ThemeData(
       primarySwatch: Colors.green,

@@ -8,11 +8,12 @@ class ProviderRoute extends StatefulWidget {
   _ProviderRouteState createState() => _ProviderRouteState();
 }
 class _ProviderRouteState extends State<ProviderRoute> {
+  var car=CartModel();
   @override
   Widget build(BuildContext context) {
     return Center(
       child: ChangeNotifierProvider<CartModel>(
-        data: CartModel(),
+        data:car,
         child: Builder(builder: (context) {
           return Column(
             children: <Widget>[

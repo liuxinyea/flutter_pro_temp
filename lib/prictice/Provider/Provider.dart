@@ -10,24 +10,26 @@ class InheritedProvider<T> extends InheritedWidget {
   @override
   bool updateShouldNotify(InheritedProvider<T> old) {
     //在此简单返回true，则每次更新都会调用依赖其的子孙节点的`didChangeDependencies`。
+    //当状态变化是决定其子孙节点是否重新渲染，返回true重新渲染
     return true;
   }
 }
-
+//实现Listenable接口，实现此接口表示为可监听的，可观察的
 class MyChangeNotifier implements Listenable{
 
   List listeners=[];
 
+  //添加观察者
   @override
   void addListener(listener) {
      listeners.add(listener);
   }
-
+  //移除观察者
   @override
   void removeListener(listener) {
     listeners.remove(listener);
   }
-
+  //通知观察者
   void notifyListener(){
     //通知所有监听器，触发监听器回调
     listeners.forEach((item)=>item());
@@ -76,9 +78,9 @@ class _ChangeNotifierProviderState<T extends MyChangeNotifier> extends State<Cha
 
   @override
   void initState() {
+    super.initState();
     // 给model添加监听器
     widget.data.addListener(update);
-    super.initState();
   }
 
   @override
