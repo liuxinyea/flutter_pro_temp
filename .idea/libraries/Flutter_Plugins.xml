@@ -1,11 +1,7 @@
 <component name="libraryTable">
   <library name="Flutter Plugins">
     <CLASSES>
-<<<<<<< HEAD
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.flutter-io.cn/shared_preferences-0.5.4+3" />
-=======
-      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/shared_preferences-0.4.3" />
->>>>>>> 2a53ed8bdfe20013867ef7771835e74e0b0a532f
     </CLASSES>
     <JAVADOC />
     <SOURCES />
