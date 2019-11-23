@@ -14,7 +14,7 @@ class Item{
 }
 
 class CartModel extends MyChangeNotifier{
-   final List<Item> _items=[];
+   final List<Item> _items=[Item(price: 20, count: 1)];
 
    UnmodifiableListView<Item> get items => UnmodifiableListView(_items);
   double get totalPrice=>

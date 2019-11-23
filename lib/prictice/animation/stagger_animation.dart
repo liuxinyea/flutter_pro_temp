@@ -10,6 +10,7 @@ class StaggerAnimation extends StatelessWidget {
       begin: 100,
       end: 300
     ).animate(
+      //CurvedAnimation是对controller的包装，对动画控制器添加动画函数曲线
       CurvedAnimation(
           parent: controller,
           curve: Interval(0, 0.6,
@@ -54,6 +55,7 @@ class StaggerAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return  AnimatedBuilder(
         animation: controller,
-        builder: _buildAnimation);
+        builder: _buildAnimation
+    );
   }
 }

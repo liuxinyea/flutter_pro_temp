@@ -19,8 +19,9 @@ class _ScaleAnimationRouteState extends State<ScaleAnimationRoute>
     super.initState();
     controller = new AnimationController(
         duration: const Duration(milliseconds:1000), vsync: this);
-    animation=CurvedAnimation(parent: controller,curve: Curves.bounceOut);   
-    //图片宽高从0变到300
+    /*添加执行动画的曲线*/
+    animation=CurvedAnimation(parent: controller,curve: Curves.bounceOut);
+    //添加动画的执行区间，类似装饰着模式
     animation = new Tween(begin: 0.0, end: 400.0).animate(animation);
     animation.addStatusListener((status){
         if (status == AnimationStatus.completed) {
